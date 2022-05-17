@@ -1,15 +1,5 @@
-# Basic Sample Hardhat Project
+# Filecoin Storage Insurance Contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+To prevent IPFS storage downtime, Filecoin enables miners to rent out storage for FIL tokens. However, further incentives beyond FIL exchange can be set up using Ethereum and Tellor. 
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+This contract is an example of a protocol using Tellor to add token incentives on top of native FIL exchange. In the contract, users can deposit tokens to request coverage for the chance that a Filecoin deal becomes inactive, sending the IPFS pin offline. If the Filecoin deal becomes inactive, users can reclaim their tokens as a claim.
